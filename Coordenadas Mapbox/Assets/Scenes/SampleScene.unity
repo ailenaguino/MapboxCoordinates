@@ -457,7 +457,7 @@ GameObject:
   - component: {fileID: 1369137495}
   - component: {fileID: 1369137494}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: CoordinatesText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -615,6 +615,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Texto: {fileID: 1369137494}
+  LocationProvider: {fileID: 0}
 --- !u!114 &1556270278
 MonoBehaviour:
   m_ObjectHideFlags: 0
