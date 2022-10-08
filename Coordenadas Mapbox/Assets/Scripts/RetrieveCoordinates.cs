@@ -7,20 +7,24 @@ using UnityEngine;
 
 public class RetrieveCoordinates : MonoBehaviour
 {
-    public static AbstractLocationProvider LocationProvider;
     public TMP_Text Texto;
+    public DeviceLocationProviderAndroidNative LocationProvider;
 
 
     // Start is called before the first frame update
     void Start()
     {
-        Vector2d a = LocationProvider.CurrentLocation.LatitudeLongitude;
-        Texto.text = "Lat: " + a.x.ToString() + " - Long: " + a.y.ToString();
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        if (LocationProvider == null)
+        LocationProvider = gameObject.AddComponent<DeviceLocationProviderAndroidNative>();
+
+
+        Vector2d a = LocationProvider.CurrentLocation.LatitudeLongitude;
+        Texto.text = "Lat: " + a.x.ToString() + " - Long: " + a.y.ToString();
     }
 }
